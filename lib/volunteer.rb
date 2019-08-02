@@ -1,6 +1,6 @@
 class Volunteer
-  attr_reader :name,:id,:specialty_id
-  attr_accessor :specialty
+  attr_reader :name,:id,:project_id
+  attr_accessor :project
 
 def initialize(attr)
   @name = attr.fetch(:name)
