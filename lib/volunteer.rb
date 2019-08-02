@@ -1,6 +1,6 @@
 class Volunteer
-  attr_reader :name,:id,:project_id
-  attr_accessor :project
+  attr_reader :name,:id
+  attr_accessor :project_id
 
 def initialize(attr)
   @name = attr.fetch(:name)
@@ -51,8 +51,5 @@ def self.all
     end
     volunteers
   end
-  
-  def projects
-    Project.find(@project_id)
-  end
+
 end
