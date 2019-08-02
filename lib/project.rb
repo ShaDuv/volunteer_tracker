@@ -37,4 +37,8 @@ def initialize(attr)
           nil
         end
       end
+
+    def volunteers
+    Volunteer.find_by_project(self.id)
+  end
 end
