@@ -11,20 +11,22 @@ end
 def self.all
     returned_volunteers = DB.exec("SELECT * FROM volunteers;")
     volunteers = []
-    returned_vounteers.each() do |volunteer|
+    returned_volunteers.each() do |volunteer|
       name = volunteer.fetch("name")
+      project_id = volunteer.fetch("project_id").to_i
       id = volunteer.fetch("id").to_i
-      vounteers.push(Volunteer.new({:name => name, :id => id}))
+      volunteers.push(Volunteer.new({:name => name, :project_id => project_id, :id => id}))
     end
     volunteers
   end
+
 
   def save
       result = DB.exec("INSERT INTO volunteers (name) VALUES ('#{@name}') RETURNING id;")
       @id = result.first().fetch("id").to_i
     end
 
-    def ==(album_to_compare)
-    self.name() == album_to_compare.name()
+    def ==(name_to_compare)
+    self.name() == name_to_compare.name()
   end
 end
