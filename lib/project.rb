@@ -11,4 +11,8 @@ def initialize(attr)
       result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
       @id = result.first().fetch("id").to_i
     end
+
+    def ==(title_to_compare)
+    self.title() == title_to_compare.title()
+  end
 end
