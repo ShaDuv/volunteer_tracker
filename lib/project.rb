@@ -4,7 +4,7 @@ class Project
 
 def initialize(attr)
   @title = attr.fetch(:title)
-  @id = attr.fetch(:id)
+  @id = attr.fetch(:id, nil)
   end
 
   def save
@@ -43,13 +43,13 @@ def initialize(attr)
   end
 
   def update(attributes)
-  @title = attributes.fetch(:title)
-  DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+   @title = attributes.fetch(:title)
+   DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
   end
 
   def delete
-  DB.exec("DELETE FROM projects WHERE id = #{@id};")
-  DB.exec("DELETE FROM volunteers WHERE project_id = #{@id};")
+    DB.exec("DELETE FROM projects WHERE id = #{@id};")
+    DB.exec("DELETE FROM volunteers WHERE project_id = #{@id};")
   end
 
 end

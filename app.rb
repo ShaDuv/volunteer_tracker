@@ -12,10 +12,24 @@ get ('/') do
   @project = Project.all
   erb(:home)
 end
+get ('/project/:id') do
+  @project = Project.find(params[:id].to_i())
+  erb(:project)
+end
+
+get ('/project/:id/edit') do
+  @project = Project.find(params[:id].to_i())
+  erb(:edit_project)
+end
 
 post('/') do
-  title = params[:title]
-  project = Project.new({:title => title, :id => nil})
+  project = Project.new(params)
   project.save()
+  redirect to('/')
+end
+
+patch ('/projects/:id') do
+  @project = Project.find(params[:id].to_i())
+  @project.update(params)
   redirect to('/')
 end
