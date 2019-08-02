@@ -33,7 +33,7 @@ def self.all
     end
 
   def save
-      result = DB.exec("INSERT INTO volunteers (name) VALUES ('#{@name}') RETURNING id;")
+      result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}', '#{@project_id}') RETURNING id;")
       @id = result.first().fetch("id").to_i
     end
 
@@ -43,7 +43,10 @@ def self.all
 
   def self.find_by_project(proj_id)
     volunteers = []
+    puts proj_id
     returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{proj_id};")
+    p returned_volunteers.values()
+    p DB.exec("SELECT * FROM volunteers").values()
     returned_volunteers.each() do |volunteer|
       name = volunteer.fetch("name")
       id = volunteer.fetch("id").to_i
