@@ -15,6 +15,7 @@ def initialize(attr)
     def ==(title_to_compare)
     self.title() == title_to_compare.title()
   end
+
   def self.all
       returned_projects = DB.exec("SELECT * FROM projects;")
       projects = []
@@ -25,4 +26,15 @@ def initialize(attr)
       end
       projects
     end
+
+    def self.find(id)
+        project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
+        if project
+          title = project.fetch("title")
+          id = project.fetch("id").to_i
+          Project.new({:title => title, :id => id})
+        else
+          nil
+        end
+      end
 end
