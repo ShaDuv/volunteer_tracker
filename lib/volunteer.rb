@@ -43,16 +43,18 @@ def self.all
 
   def self.find_by_project(proj_id)
     volunteers = []
-    puts proj_id
     returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = #{proj_id};")
-    p returned_volunteers.values()
-    p DB.exec("SELECT * FROM volunteers").values()
     returned_volunteers.each() do |volunteer|
       name = volunteer.fetch("name")
       id = volunteer.fetch("id").to_i
       volunteers.push(Volunteer.new({:name => name, :project_id => proj_id, :id => id}))
     end
     volunteers
+  end
+
+  def update(attributes)
+   @name = attributes.fetch(:name)
+   DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
   end
 
 end
