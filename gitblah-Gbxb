@@ -1,0 +1,24 @@
+2019-08-02T18:02:22-07:00 | c53e047869b1f51f630a61eb07123582f7df6de4 | pass test 22 (capybara test 4)
+2019-08-02T17:17:02-07:00 | 83a166196dbe121ca6eea3ad7315103be028125b | pass test 21 (Capybara 3) despite a typo in the actual test)
+2019-08-02T16:39:47-07:00 | 6c69d7a504d488e9da205aba3c106b9ef16fb1b3 | pass test 20 (capybara 2)
+2019-08-02T16:04:26-07:00 | 940ab700b80976b16971d74b797cce7f913c200e | pass test 19 (first Capybara)
+2019-08-02T15:12:32-07:00 | 923576f62a1e1e641dcfa64e917ae9a319bd8084 | pass test 18
+2019-08-02T15:08:17-07:00 | 5d748115b0c06bb478488607cfd5a44ecb0cc2d7 | pass test 17
+2019-08-02T15:02:03-07:00 | bcc12e8c4c2c068932917982e4e7704f9be52ab0 | got test 16 to pass. Aka...'fixed it/facepalm'
+2019-08-02T14:45:01-07:00 | 693a7acc0372e378608d1f150334cb201cc212be | still not working, returns empty array
+2019-08-02T14:33:44-07:00 | bcef1bc3716d854fc6f7550377aad46311a012be | test not passing but spending a ton of time trying to figure out why
+2019-08-02T13:41:24-07:00 | 15f07cf874fd07d476f7075e83c9a005d9c214dc | pass test 15
+2019-08-02T13:38:22-07:00 | c09aa08a807eb241c83ee94c1f732fa610d3824b | pass test 14
+2019-08-02T13:37:33-07:00 | a29d09c22c9189f5c000924871d035d5f411011f | pass test 13
+2019-08-02T13:32:39-07:00 | 258bbad5c73e52951d0fdfe06a2d74317c556599 | pass test 12
+2019-08-02T13:19:48-07:00 | 204de234617c22399d132e40d2943a397761569f | pass test 11
+2019-08-02T13:13:05-07:00 | db93db843e32cc53c5ff277acdcd93958eae0617 | will pass test 10. Took a lot longe because apparently I have been running the wrong version of Ruby this entire time due to a typo when I first installed it. Fixed.
+2019-08-02T12:12:01-07:00 | 821ddb1411796224312d1d40cf0424144ba01ecb | pass test 9. chasing down rouge ends when uncommenting code is a pain
+2019-08-02T11:09:21-07:00 | 86c56744a699a399b731168aa22215c38a8caf69 | pass test 8
+2019-08-02T10:26:26-07:00 | 20db20c96698a37b329dca082c51c6f3716bbbc1 | pass test 6
+2019-08-02T10:01:44-07:00 | 774b83824799ed0ed1324f1eee27fa6948d5c679 | pass test 5
+2019-08-02T09:34:14-07:00 | 1cac5ed95b1d86190c040208c6c2791fa82666f4 | pass the third test
+2019-08-02T09:26:40-07:00 | ce53f95a6140c5bec65385e6438806b094f558de | pass the second test
+2019-08-02T09:24:52-07:00 | 0f7692ebcdd9d09ca143ab44fd8a3325c66cd012 | pass the first test
+2019-08-02T08:50:41-07:00 | 27e0112a6d47160742ef690526431dd5b2d99a32 | copy over tests and start database
+2019-08-02T08:16:20-07:00 | d4efec3694982e0bee0b27a17a868314dbafc6ff | initial commit
